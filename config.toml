@@ -2,5 +2,4 @@ baseURL = 'https://libmerit.github.io/'
 languageCode = 'fa-ir'
 title = 'آزادی و شایسته‌سالاری مردمی'
 disableKinds = ["taxonomyTerm", "categories", "tags", "xml", "sitemap"]
-publishDir = "docs"
 googleAnalytics = "G-Y335TJ1F7Q"
