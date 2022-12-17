@@ -1,0 +1,31 @@
+.btn {
+  display: block;
+  text-decoration: none;
+  background: #fff;
+  color: #209748;
+  padding: 4px 32px;
+  border-radius: 32px;
+  border: 1px solid #209748;
+  margin: 32px auto 0;
+  width: 250px;
+  text-align: center;
+
+  &:hover {
+    background: #46ae69;
+    border-color: #209748;
+    color: #fff;
+  }
+}
+
+.content-box {
+  padding: 32px;
+  border-radius: 16px;
+  background: #ffffffad;
+  @media (max-width: 1200px) {
+    background: none;
+  }
+}
+
+.img-cover {
+  max-width: 70vw;
+}
