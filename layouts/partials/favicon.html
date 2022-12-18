@@ -1,0 +1,6 @@
+{{ $favicon := resources.Get "images/favicon.png" }}
+{{ ($favicon.Fill "16x16 ico" | resources.Copy "favicon.ico").Permalink }}
+{{ range (slice "32x32" "96x96" "16x16") }}
+  {{ $img := $favicon.Fill . | resources.Copy (printf "favicon-%s.png" .) }}
+  <link rel="icon" type="image/png" sizes="{{ . }}" href="{{ $img.Permalink }}">
+{{ end}}
