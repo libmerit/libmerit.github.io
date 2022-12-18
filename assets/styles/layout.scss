@@ -28,11 +28,14 @@
   }
 }
 
-.column {
+.column, .row {
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+.column {
+  flex-direction: column;
 }
 
 .header-svg, .footer-svg {

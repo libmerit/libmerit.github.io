@@ -1,8 +1,8 @@
 .btn {
   display: block;
   text-decoration: none;
-  background: #fff;
-  color: #209748;
+  background: #209748;
+  color: #fff;
   padding: 4px 32px;
   border-radius: 32px;
   border: 1px solid #209748;
@@ -12,17 +12,37 @@
 
   &:hover {
     background: #46ae69;
-    border-color: #209748;
+    border-color: #137133;
     color: #fff;
   }
+}
+
+.btn-tweet {
+  cursor: pointer;
+  vertical-align: top;
+  display: inline-block;
+  box-sizing: border-box;
+  text-decoration: none;
+  height: 28px;
+  padding: 1px 12px 1px 12px;
+  border-radius: 9999px;
+
+  color: #fff;
+  background-color: #1d9bf0;
+  line-height: 26px !important;
+  font-size: 13px !important;
+  font-weight: 500 !important;
+  font: normal normal normal 12px/18px 'Helvetica Neue',Arial,sans-serif;
 }
 
 .content-box {
   padding: 32px;
   border-radius: 16px;
   background: #ffffffad;
+  box-shadow: 10px 10px 10px #0001;
   @media (max-width: 1200px) {
     background: none;
+    box-shadow: none;
   }
 }
 

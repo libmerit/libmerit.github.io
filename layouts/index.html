@@ -1,22 +1,20 @@
 {{ define "main" }}
-  <div class="container mt-lg-desktop">
-    <div class="column mt-lg">
+  <div class="container mt-lg mb-lg">
+    <div class="column">
       {{ $coverImage := .Page.Resources.Get .Params.CoverImage }}
       <img class="img-cover" src="{{ $coverImage.Permalink }}" alt="{{ .Title }}" />
-
-      {{ partial "socials" }}
     </div>
 
-    <div class="content-box mb-lg" style="max-width:100vw; box-sizing:border-box;">
+    <div class="content-box" style="max-width:100vw; box-sizing:border-box;">
       {{.Content}}
-
+      <div style="text-align:left;margin-top:-20px">{{ partial "tweet" }}</div>
       {{ if .Params.DownloadLabel }}
-      <a
-        href="{{ (resources.Get "libmerit.pdf" | resources.Copy .Params.DownloadName).Permalink }}"
-        class="btn"
-        target="_blank"
-        download="{{ .Params.DownloadName }}"
-      >{{ .Params.DownloadLabel }}</a>
+        <a
+          href="{{ (resources.Get "libmerit.pdf" | resources.Copy .Params.DownloadName).Permalink }}"
+          class="btn"
+          target="_blank"
+          download="{{ .Params.DownloadName }}"
+        >{{ .Params.DownloadLabel }}</a>
       {{ end }}
     </div>
   </div>
