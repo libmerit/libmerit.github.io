@@ -9,6 +9,7 @@ h1 {
   margin-top: 0; }
 
 p {
+  margin: 8px 0;
   text-align: justify;
   color: #222; }
 
@@ -119,15 +120,5 @@ p {
 .img-cover {
   max-width: 70vw; }
 
-.mt-lg {
-  margin-top: 64px; }
-  .mt-lg-desktop {
-    margin-top: 64px; }
-    @media (max-width: 1200px) {
-      .mt-lg-desktop {
-        margin-top: 0; } }
-.mb-lg {
-  margin-bottom: 64px; }
-
-.mt-sm {
-  margin-top: 16px; }
+.my-lg {
+  margin: 32px 0; }
