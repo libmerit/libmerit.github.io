@@ -3,6 +3,12 @@
   <head>
     <title>{{ .Site.Title }}</title>
     <meta content="width=device-width, initial-scale=1" name="viewport" />
+    {{ $ogImage := resources.Get "images/og-image.png" }}
+    <meta 
+      property="og:image" 
+      content="{{ ($ogImage.Fill "1200x630 TopRight webp").Permalink }}"
+      alt="{{ .Title }}"
+    />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lateef&display=swap" rel="stylesheet">

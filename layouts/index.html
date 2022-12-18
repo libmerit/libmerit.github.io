@@ -1,9 +1,8 @@
 {{ define "main" }}
   <div class="container mt-lg-desktop">
     <div class="column mt-lg">
-      {{ with .Page.Resources.Get .Params.CoverImage }}
-        <img class="img-cover" src="{{ .Permalink }}" />
-      {{ end }}
+      {{ $coverImage := .Page.Resources.Get .Params.CoverImage }}
+      <img class="img-cover" src="{{ $coverImage.Permalink }}" alt="{{ .Title }}" />
 
       {{ partial "socials" }}
     </div>
