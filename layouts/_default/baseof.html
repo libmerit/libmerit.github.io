@@ -3,8 +3,14 @@
   <head>
     <title>{{ .Site.Title }}</title>
     <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@libmerit" />
+    <meta name="twitter:creator" content="@libmerit" />
+    <meta property="og:title" content="{{ .Site.Title }}" />
+    <meta property="og:url" content="{{ .Site.BaseURL }}" />
+    <meta property="og:description" content="{{ .Site.Params.OgDescription }}" />
     {{ $ogImage := resources.Get "images/og-image.png" }}
-    <meta 
+    <meta
       property="og:image" 
       content="{{ ($ogImage.Fill "1200x630 TopRight webp").Permalink }}"
       alt="{{ .Title }}"
