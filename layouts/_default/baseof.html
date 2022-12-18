@@ -3,18 +3,17 @@
   <head>
     <title>{{ .Site.Title }}</title>
     <meta content="width=device-width, initial-scale=1" name="viewport" />
-    <meta name="twitter:card" content="summary" />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" property="og:title" content="{{ .Site.Title }}" />
+    <meta name="twitter:description" property="og:description" content="{{ .Site.Params.OgDescription }}" />
+    <meta name="twitter:url" property="og:url" content="{{ .Site.BaseURL }}" />
     <meta name="twitter:site" content="@libmerit" />
     <meta name="twitter:creator" content="@libmerit" />
-    <meta property="og:title" content="{{ .Site.Title }}" />
-    <meta property="og:url" content="{{ .Site.BaseURL }}" />
-    <meta property="og:description" content="{{ .Site.Params.OgDescription }}" />
+    <meta name="twitter:image:alt" content="{{ .Site.Title }}" />
     {{ $ogImage := resources.Get "images/og-image.png" }}
-    <meta
-      property="og:image" 
-      content="{{ ($ogImage.Fill "1200x630 TopRight webp").Permalink }}"
-      alt="{{ .Title }}"
-    />
+    <meta name="twitter:image" property="og:image" content="{{ ($ogImage.Fill "1200x630 TopRight jpg").Permalink }}" alt="{{ .Title }}" />
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lateef&display=swap" rel="stylesheet">
