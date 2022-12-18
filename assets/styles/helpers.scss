@@ -1,19 +1,66 @@
-.mt-lg {
-  margin-top: 64px;
-  
-  &-desktop {
-    margin-top: 64px;
+$sides: (
+  // "ma": margin,
+  // "mx": margin,
+  "my": margin,
+  // "mt": margin-top,
+  // "mb": margin-bottom,
+  // "mr": margin-right,
+  // "ml": margin-left,
 
-    @media (max-width: 1200px) {
-      margin-top: 0;
+  // "pa": padding,
+  // "px": padding,
+  // "py": padding,
+  // "pt": padding-top,
+  // "pr": padding-right,
+  // "pb": padding-bottom,
+  // "pl": padding-left,
+);
+
+$spaces: (
+  // "none": 0,
+  // "xs": 4px,
+  // "sm": 8px,
+  // "md": 16px,
+  "lg": 32px,
+  // "xl": 64px,
+);
+
+$breakpoints: (
+  "": "",
+  // "wide": 1200px,
+);
+
+@each $breakName, $breakValue in $breakpoints {
+  @each $sideName, $sideValue in $sides {
+    @each $spaceName, $spaceValue in $spaces {
+      $selector: #{$sideName}-#{$spaceName};
+      @if $breakName != "" {
+        $selector: #{$selector}-#{$breakName};
+      }
+
+      @if $breakName != "" {
+        @media (min-width: $breakValue) {
+          .#{$selector} {
+            @if ($sideName == "mx" or $sideName == "px") {
+              #{$sideValue}: 0 #{$spaceValue};
+            } @else if ($sideName == "my" or $sideName == "py") {
+              #{$sideValue}: #{$spaceValue} 0;
+            } @else {
+              #{$sideValue}: #{$spaceValue};
+            }
+          }
+        }
+      } @else {
+        .#{$selector} {
+          @if ($sideName == "mx" or $sideName == "px") {
+            #{$sideValue}: 0 #{$spaceValue};
+          } @else if ($sideName == "my" or $sideName == "py") {
+            #{$sideValue}: #{$spaceValue} 0;
+          } @else {
+            #{$sideValue}: #{$spaceValue};
+          }
+        }
+      }
     }
   }
-}
-
-.mb-lg {
-  margin-bottom: 64px;
-}
-
-.mt-sm {
-  margin-top: 16px;
 }

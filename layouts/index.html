@@ -1,5 +1,5 @@
 {{ define "main" }}
-  <div class="container mt-lg mb-lg">
+  <div class="container my-lg">
     <div class="column">
       {{ $coverImage := .Page.Resources.Get .Params.CoverImage }}
       <img class="img-cover" src="{{ $coverImage.Permalink }}" alt="{{ .Title }}" />
