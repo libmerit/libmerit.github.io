@@ -7,7 +7,8 @@
 
     <div class="content-box" style="max-width:100vw; box-sizing:border-box;">
       {{.Content}}
-      <div style="text-align:left">{{ partial "tweet" }}</div>
+      {{ partial "socials" . }}
+
       {{ if .Params.DownloadLabel }}
         <a
           href="{{ (resources.Get "libmerit.pdf" | resources.Copy .Params.DownloadName).Permalink }}"

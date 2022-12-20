@@ -1,7 +1,21 @@
-<div class="socials mt-md">
-  {{/* <a href="https://linkedin.com/in/libmerit/"><img alt="github" src="{{ (resources.Get "images/linkedin.svg").Permalink }}" /></a> */}}
-  {{/* <a href="https://t.me/libmerit"><img alt="telegram" src="{{ (resources.Get "images/telegram.svg").Permalink }}" /></a> */}}
-  {{/* <a href="https://instagram.com/libmerit"><img alt="instagram" src="{{ (resources.Get "images/instagram.svg").Permalink }}" /></a> */}}
-  <a href="https://github.com/libmerit/libmerit.github.io/discussions"><img alt="github" src="{{ (resources.Get "images/github.svg").Permalink }}" /></a>
-  <a href="mailto:libmerit@gmail.com"><img alt="github" src="{{ (resources.Get "images/google.svg").Permalink }}" /></a>
+{{ $text := "این کتاب رو خیلی پیشنهاد می‌کنم" }}
+<div style="text-align:left; direction: ltr">
+  <a
+    class="btn-linkedin"
+    target="_blank"
+    href="http://www.linkedin.com/shareArticle?mini=true&url={{ urlquery .Site.BaseURL }}&title={{ urlquery .Site.Title }}&summary={{ urlquery (printf "%s\n%s" $text "#libmerit #مهسا_امینی") }}&source=libmerit.github.io"
+  >Post to Linkedin</a>
+
+  <a 
+    class="btn-tweet twitter-share-button"
+    target="_blank"
+    href="https://twitter.com/intent/tweet?text={{ urlquery (printf "%s:\n%s" $text .Site.BaseURL) }}&hashtags={{ urlquery "libmerit,مهسا_امینی" }}&url=%0A&via=libmerit"
+    data-size="large">
+  Tweet #libmerit</a>
+
+  <a
+    class="btn-telegram hidden"
+    target="_blank"
+    href="https://t.me/share/url?url={{ urlquery .Site.BaseURL }}&text={{ urlquery $text }}"
+  >Share on Telegram</a>
 </div>

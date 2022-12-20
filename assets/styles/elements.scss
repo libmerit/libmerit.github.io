@@ -17,7 +17,7 @@
   }
 }
 
-.btn-tweet {
+.btn-tweet, .btn-linkedin, .btn-telegram {
   cursor: pointer;
   vertical-align: top;
   display: inline-block;
@@ -33,6 +33,14 @@
   font-size: 13px !important;
   font-weight: 500 !important;
   font: normal normal normal 12px/18px 'Helvetica Neue',Arial,sans-serif;
+}
+
+.btn-linkedin {
+  background-color: #007bb7;
+}
+
+.btn-telegram {
+  background-color: #1c93e3;
 }
 
 .content-box {
