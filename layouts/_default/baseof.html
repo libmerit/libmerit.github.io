@@ -3,11 +3,11 @@
   <head>
     <title>{{ .Site.Title }}</title>
     <meta content="width=device-width, initial-scale=1" name="viewport" />
-    {{ partial "metadata" }}
-    
-    {{ partial "googlefont" }}
+    {{ partial "metadata" . }}
+
+    {{ partial "googlefont" . }}
     <link rel="stylesheet" href="{{ (resources.Get "styles/styles.scss" | resources.ToCSS).Permalink }}">
-    {{ partial "favicon" }}
+    {{ partial "favicon" . }}
     {{ template "_internal/google_analytics.html" . }}
   </head>
 
