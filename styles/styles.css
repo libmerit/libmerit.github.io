@@ -86,7 +86,12 @@ p {
   border: 1px solid #209748;
   margin: 32px auto 0;
   width: 250px;
+  max-width: 100vw;
   text-align: center; }
+  @media (max-width: 375px) {
+    .btn {
+      padding: 2px 0px;
+      font-size: 24px; } }
   .btn:hover {
     background: #46ae69;
     border-color: #137133;
