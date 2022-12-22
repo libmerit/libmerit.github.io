@@ -6,7 +6,7 @@
     href="http://www.linkedin.com/shareArticle?mini=true&url={{ urlquery .Site.BaseURL }}&title={{ urlquery .Site.Title }}&summary={{ urlquery (printf "%s\n%s" $text "#libmerit #مهسا_امینی") }}&source=libmerit.github.io"
   >Post to Linkedin</a>
 
-  <a 
+  <a
     class="btn-tweet twitter-share-button"
     target="_blank"
     href="https://twitter.com/intent/tweet?text={{ urlquery (printf "%s:\n%s" $text .Site.BaseURL) }}&hashtags={{ urlquery "libmerit,مهسا_امینی" }}&url=%0A&via=libmerit"

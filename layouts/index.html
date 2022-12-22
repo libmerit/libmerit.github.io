@@ -4,7 +4,7 @@
       {{ $coverImage := .Page.Resources.Get .Params.CoverImage }}
       <picture>
         <source srcset="{{ ($coverImage.Resize "467x webp q75").Permalink }}" type="image/webp">
-        <source srcset="{{ $coverImage.Permalink }}" type="image/jpeg"> 
+        <source srcset="{{ $coverImage.Permalink }}" type="image/jpeg">
         <img class="img-cover" src="img/creakyOldJPEG.jpg" alt="{{ .Title }}">
       </picture>
     </div>
